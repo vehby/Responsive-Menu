@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <ul class="menu ">
+          <li class="logo"><a href="#">Invisible App</a></li>
+          <li class="item"><a href="#">Home</a></li>
+          <li class="item"><a href="#">About</a></li>
+          <li class="item"><a href="#">Services</a></li>
+          <li class="item"><a href="#">Features</a></li>
+          <li class="item"><a href="#">Blog</a></li>
+          <li class="item"><a href="#">Contact</a></li>
+          <li class="item button"><a href="#">Log In</a></li>
+          <li class="item button secondary"><a href="#">Sign Up</a></li>
+          <li class="toggle">
+            menu
+            <a href="#">A</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script>
+      $(function() {
+        $(".toggle").on("click", function() {
+          if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("A");
+          } else {
+            $(".item").addClass("active");
+            $(this)
+              .find("A")
+              .html("K");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
